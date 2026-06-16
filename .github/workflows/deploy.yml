@@ -13,5 +13,14 @@ jobs:
           pwd
           ls
           whoami
+  apply:
+    runs-on: ubuntu-24.04
+    needs: plan
+    if: success() && github.ref == 'refs/heads/main'
+    steps:
+      - name: bash2
+        run: |
+          echo "my name is jksoam"
+    
 
     
