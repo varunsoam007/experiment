@@ -16,8 +16,7 @@ jobs:
           whoami
   apply:
     runs-on: ubuntu-24.04
-    needs: plan
-    if: success() && github.ref == 'refs/heads/main'
+    if: always()
     steps:
       - name: bash2
         run: |
