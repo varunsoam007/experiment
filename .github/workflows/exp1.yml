@@ -14,6 +14,7 @@ jobs:
         run: |
           pwd
           ls
+          exit 1
   plan:
    runs-on: ubuntu-24.04
    needs: install
