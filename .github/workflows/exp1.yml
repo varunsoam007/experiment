@@ -22,6 +22,7 @@ jobs:
      - name: plan
        run: |
          echo "my name is jksoam"
+         exit 2
   apply:
     runs-on: ubuntu-24.04
     needs: 
