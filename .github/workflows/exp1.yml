@@ -14,7 +14,7 @@ jobs:
         run: |
           pwd
           ls
- plan:
+  plan:
    runs-on: ubuntu-24.04
    needs: install
    steps:
@@ -22,7 +22,7 @@ jobs:
        run: |
          echo "my name is jksoam"
        
-   steps:
+   
    
           
       
