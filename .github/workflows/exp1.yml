@@ -28,7 +28,7 @@ jobs:
     needs: 
      - plan
      - install
-    if: failure() && github.ref == 'ref/main/head'
+    if: failure() && github.ref == 'refs/heads/main'
     steps:
       - name: apply
         run: |
