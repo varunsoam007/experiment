@@ -14,6 +14,20 @@ jobs:
         uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: "1.14.6"
+  init:
+    runs-on: ubuntu-24.04
+    if: success() && github.ref == 'refs/heads/main'
+    steps:
+      - name: terraformInit
+        run: |
+          echo "sala terrform init karega"
+          pwd
+          ls
+          
+ 
+
+
+          
   
   
   
