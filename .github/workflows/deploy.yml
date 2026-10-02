@@ -2,8 +2,8 @@ name: jksoam
 on: 
   push: 
     branches: 
-      - main
-      - feature
+      # - main
+      # - feature
 jobs:
   plan:
     runs-on: ubuntu-latest
