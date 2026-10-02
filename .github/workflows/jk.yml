@@ -1,0 +1,22 @@
+name: trailPipeline
+on: 
+  push: 
+    branches: 
+      - main
+      - dev
+jobs:
+  install:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: clone
+        uses: actions/checkout@v4
+      - name: installTerraform
+        uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: "1.14.6"
+  
+  
+  
+    
+    
+    
