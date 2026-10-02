@@ -14,21 +14,20 @@ jobs:
         run: |
           pwd
           ls
-          # exit 1
+      
   plan:
    runs-on: ubuntu-24.04
-   #needs: install
+   needs: install
    steps:
      - name: plan
        run: |
          echo "my name is jksoam"
-         exit 1
   apply:
     runs-on: ubuntu-24.04
     needs: 
      - plan
      - install
-    if: failure() && github.ref == 'refs/heads/main'
+    if: success() && github.ref == 'refs/heads/main'
     steps:
       - name: apply
         run: |
